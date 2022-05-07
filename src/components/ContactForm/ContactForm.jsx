@@ -24,8 +24,8 @@ export default function ContactForm({ contactId, closeForm }) {
     contactId ? contactState.phone : ''
   );
 
-  const [createContact, { isLoading: isAdding }] = useCreateContactMutation();
-  const [editContact, result] = useEditContactMutation();
+  const [createContact] = useCreateContactMutation();
+  const [editContact] = useEditContactMutation();
 
   const onFormSubmit = e => {
     e.preventDefault();
